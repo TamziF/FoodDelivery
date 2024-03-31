@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:enabled="true"
+        android:icon="@drawable/restaurant_menu"
+        android:title="@string/bottom_navigation_menu_menu_label" />
+
+    <item
+        android:enabled="false"
+        android:icon="@drawable/account_circle"
+        android:title="@string/bottom_navigation_menu_profile_label" />
+
+    <item
+        android:enabled="false"
+        android:icon="@drawable/shopping_cart"
+        android:title="@string/bottom_navigation_menu_cart_label" />
+
+</menu>
