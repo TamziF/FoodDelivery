@@ -1,11 +1,12 @@
-package com.example.fooddelivery
+package com.example.fooddelivery.ui.view.menu.dishes_recycler
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
+import com.example.fooddelivery.ui.model.Dish
 import com.example.fooddelivery.databinding.DishCardBinding
 
-class Adapter : ListAdapter<Dish, DishViewHolder>(
+class DishesAdapter : ListAdapter<Dish, DishViewHolder>(
     DishItemDiffCallBack()
 ) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DishViewHolder {

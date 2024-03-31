@@ -13,8 +13,7 @@
             android:id="@+id/dish_image"
             android:layout_width="135dp"
             android:layout_height="135dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/pizza" />
@@ -39,7 +38,7 @@
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@id/dish_name"
             app:layout_constraintTop_toBottomOf="@id/dish_name"
-            tools:text="Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус" />
+            tools:text="Ветчина, шампиньоны, увеличинная порция моцареллы, томатный соус" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.Material3.Button.OutlinedButton"
@@ -50,7 +49,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dish_ingredients"
-            tools:text="от 345 р"
+            android:text="price"
             tools:textSize="16sp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
