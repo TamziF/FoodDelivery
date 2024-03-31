@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="text_gray">#AAAAAD</color>
     <color name="button_cost_text">#FD3A69</color>
+    <color name="chosen_category_color">#646464</color>
+    <color name="not_chosen_category_color">#FFFFFF</color>
 </resources>

@@ -1,9 +1,11 @@
 package com.example.fooddelivery.ui.view.menu
 
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.fooddelivery.R
 import com.example.fooddelivery.databinding.FragmentMenuBinding
 import com.example.fooddelivery.ui.stateholders.MenuViewModel
 import com.example.fooddelivery.ui.view.menu.categories_recycler.CategoriesAdapter
@@ -20,7 +22,10 @@ class MenuFragmentViewController(
     private val categoriesRecycler = binding.categoriesRecycler
 
     private val dishesAdapter = DishesAdapter()
-    private val categoriesAdapter = CategoriesAdapter()
+    private val categoriesAdapter = CategoriesAdapter(
+        ContextCompat.getColor(fragment!!.requireContext(), R.color.chosen_category_color),
+        ContextCompat.getColor(fragment!!.requireContext(), R.color.not_chosen_category_color)
+    ) { viewModel.getDishes(it) }
 
     fun bindViews() {
         bindDishesRecycler()
@@ -28,7 +33,8 @@ class MenuFragmentViewController(
     }
 
     private fun bindCategoriesRecycler() {
-        categoriesRecycler.layoutManager = LinearLayoutManager(fragment!!.requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        categoriesRecycler.layoutManager =
+            LinearLayoutManager(fragment!!.requireContext(), LinearLayoutManager.HORIZONTAL, false)
         categoriesRecycler.adapter = categoriesAdapter
 
         fragment!!.viewLifecycleOwner.lifecycleScope.launch {
